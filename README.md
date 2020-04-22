@@ -9,3 +9,6 @@ https://ryanstutorials.net/linuxtutorial/cheatsheet.php
 https://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php
 
 https://ryanstutorials.net/bash-scripting-tutorial/
+
+## Linux fundamentals:
+Essentially a process is a running instance of a program.
