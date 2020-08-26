@@ -83,8 +83,15 @@ grep -r "string-example" * # Search string-example in the content of every file 
 find -name "file-name" # Search file by file-name on current dir
 ```
 
+# Transfering files
+```bash
+
+rsync -avz --progress <file> <user>@<server-address>:<file>  # Uploads file to server
+
+```
+
 # .bashrc file
-.bashrc file is used to add alias and define environment variables.
+_.bashrc_ file is used to add alias and define environment variables.
 
 Add an environment variable to .bashrc
 ```bash
