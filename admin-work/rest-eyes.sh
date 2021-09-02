@@ -1,18 +1,28 @@
 #!/bin/bash
 while true; do
+    echo "[ $(date +"%Y-%m-%d %R")]     Working!"
+    echo ""
     sleep 30m
+
+
     paplay /usr/share/sounds/freedesktop/stereo/service-logout.oga
-    echo "Go rest your eyes!!"
+    echo "[ $(date +"%Y-%m-%d %R")]     Go rest your eyes!!"
 
-    echo "(press enter to go rest, enter \"stop\" to exit)"
+    echo "                        ↲ = continue"
+    echo "                        q = exit"
     read option
-    if [ "$option" = "stop" ]; then break; fi
+    if [ "$option" = "q" ]; then break; fi
 
+    echo "[ $(date +"%Y-%m-%d %R")]     Resting..."
+    echo ""
     sleep 5m
-    paplay /usr/share/sounds/freedesktop/stereo/service-login.oga
-    echo "You are allowed to go back to work now"
+
     
-    echo "(press enter to continue working, enter \"stop\" to exit)"
+    paplay /usr/share/sounds/freedesktop/stereo/service-login.oga
+    echo "[ $(date +"%Y-%m-%d %R")]     You are allowed to go back to work now"
+    
+    echo "                        ↲ = continue"
+    echo "                        q = exit"
     read option
-    if [ "$option" = "stop" ]; then break; fi
-done;
+    if [ "$option" = "q" ]; then break; fi
+done
