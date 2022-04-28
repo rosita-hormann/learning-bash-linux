@@ -214,6 +214,14 @@ do
     echo $value
 done
 
+#for in array loop
+my_array=("elem1" "elem2" "elem3")
+
+for elem in "${my_array[@]}"
+do
+    echo $elem
+done
+
 
 ```
 
