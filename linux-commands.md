@@ -103,7 +103,21 @@ cat /etc/passwd
 chown USER:GROUP FILE
 ```
 
+# Run stuff in background
 
+```bash
+# Different commands running stuff in background:
+
+# Redirecting prints of Python (both normal and error messages)  into an output file
+nohup python <python-script.py> <parameters> > output.log 2>&1 &
+
+# This one does not print error messages into the output file
+./my_script.sh &> output.log &
+
+# Remove all files in a directory, in background, while logging the results
+nohup bash -c 'for d in /home/my_user/Downloads; do [ -d "$d" ] && rm -rf "$d" && echo "Deleted $d at $(date)"; done; echo "deletion finished at $(date)"' > rm_rf_output.log 2>&1 &
+
+```
 
 # .bashrc file
 _.bashrc_ file is used to add alias and define environment variables.
