@@ -85,10 +85,25 @@ find -name "file-name" # Search file by file-name on current dir
 
 # Transfering files
 ```bash
+ # Uploads file to server:
+rsync -avz --progress <file> <user>@<server-address>:<file>
 
-rsync -avz --progress <file> <user>@<server-address>:<file>  # Uploads file to server
+# Download file from server to current dir:
+rsync -avz --progress <user>@<server-adress>:<file> .
 
 ```
+
+# Users stuff
+
+```bash
+# Check users and groups
+cat /etc/passwd
+
+# Change owner of a file
+chown USER:GROUP FILE
+```
+
+
 
 # .bashrc file
 _.bashrc_ file is used to add alias and define environment variables.
